@@ -2,8 +2,8 @@
 
 (function() {
 
-  Zendesk.Apps.CRMIntegrationApp = Zendesk.Apps.App.extend({
-    location: Zendesk.Apps.Site.TICKET_PROPERTIES,
+  ZendeskApps.CRMIntegrationApp = ZendeskApps.App.extend({
+    location: ZendeskApps.Site.TICKET_PROPERTIES,
     appID: '/apps/01-crm-integration/versions/1.0.0',
     name: 'CRM Integration',
 
