@@ -17,7 +17,7 @@
     defaultSheet: 'loading',
 
     dependencies: {
-      requesterID:  'Zendesk.currentTicket.requester.id'
+      requesterID:  'workspace.ticket.requester.id'
     },
 
     templates: {
