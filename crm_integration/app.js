@@ -86,7 +86,6 @@
     },
 
     firstLookup: function() {
-      // Remove this code when apps start resetting state with route changes (keep clearTimeout)
       this._resetAppState();
 
       if (this.deps.requesterID)
