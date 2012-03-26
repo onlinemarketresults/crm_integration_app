@@ -1,3 +1,4 @@
 {
-  "name": "CRM Integration"
+  "name": "CRM Integration",
+  "singleInstall": true
 }
