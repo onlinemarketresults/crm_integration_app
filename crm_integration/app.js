@@ -1,8 +1,6 @@
-//= require ./app.js
-
 (function() {
 
-  ZendeskApps.CRMIntegrationApp = ZendeskApps.App.extend({
+  return ZendeskApps.App.extend({
     location: ZendeskApps.Site.TICKET_PROPERTIES,
     appID: '/apps/01-crm-integration/versions/1.0.0',
     name: 'CRM Integration',
