@@ -20,7 +20,7 @@
     templates: {
       main: '<div class="crm_integration_app">' +
             '  <div>' +
-            '    <h3>CRM Integration <span class="loader" style="display: none;">&nbsp;&nbsp;<img src="/console/assets/ajax-loader-1.gif"/></span></h3>' +
+            '    <h3>CRM Integration <span class="loader" style="display: none;"></span></h3>' +
             '  </div><hr/>' +
             '  <section data-sheet-name="records" class="records"></section>' +
             '  <section data-sheet-name="loading" class="loading"></section>' +
