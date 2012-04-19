@@ -64,8 +64,8 @@
     },
 
     requests: {
-      lookupByID:   function(userID) { return { url: encodeURI("/api/v2/crm/%@.json".fmt(userID)) }; },
-      syncUserInfo: function(userID) { return { url: encodeURI("/api/v2/crm/%@/sync_user_info.json".fmt(userID)) }; }
+      lookupByID:   function(userID) { return { url: encodeURI("/api/v2beta/crm/%@.json".fmt(userID)) }; },
+      syncUserInfo: function(userID) { return { url: encodeURI("/api/v2beta/crm/%@/sync_user_info.json".fmt(userID)) }; }
     },
 
     events: {
