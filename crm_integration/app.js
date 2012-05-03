@@ -2,7 +2,6 @@
 
   return ZendeskApps.defineApp(ZendeskApps.Site.TICKET_PROPERTIES, {
     appID: '/apps/01-crm-integration/versions/1.0.0',
-    name: 'CRM Integration',
 
     // Local vars
     currentDelay: 5000,
@@ -20,7 +19,7 @@
     templates: {
       main: '<div class="crm_integration_app">' +
             '  <div>' +
-            '    <h3>CRM Integration <span class="loader" style="display: none;"></span></h3>' +
+            '    <h3>{{I18n.app.name}} <span class="loader" style="display: none;"></span></h3>' +
             '  </div><hr/>' +
             '  <section data-sheet-name="records" class="records"></section>' +
             '  <section data-sheet-name="loading" class="loading"></section>' +
@@ -46,21 +45,6 @@
                     '{{/if}}',
       error:  '<div class="error">{{message}}</div>',
       info:  '<div class="info">{{message}}</div>'
-    },
-
-    translations: {
-      problem: "There's been a problem: {{error}}",
-
-      records: {
-        minimize: "Minimize results",
-        no_data:  "No data found",
-        show_all: "Show all results"
-      },
-
-      sync: {
-        error:    "Failed to synchronize user info.",
-        pending:  "Syncing user info..."
-      }
     },
 
     requests: {
