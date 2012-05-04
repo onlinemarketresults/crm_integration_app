@@ -1,4 +1,4 @@
 {
-  "name": "CRM Integration",
+  "default_locale": "en",
   "singleInstall": true
 }
