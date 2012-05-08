@@ -4,7 +4,7 @@
       "name": { "label": "Name" }
     },
 
-   "description": "Integrate with Sugar CRM or Salesforce data. Configure CRM settings in 'Settings -> Extensions -> CRM' in your main help desk.",
+   "description": "See Salesforce info about a requester on a ticket",
    "name":        "CRM Integration"
   },
 
