@@ -1,9 +1,5 @@
 {
   "app": {
-    "configuration": {
-      "name": { "label": "Name" }
-    },
-
    "description": "Integrate with Sugar CRM or Salesforce data. Configure CRM settings in 'Settings -> Extensions -> CRM' in your main help desk.",
    "name":        "CRM Integration"
   },
