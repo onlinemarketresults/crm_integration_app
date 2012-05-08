@@ -1,4 +1,4 @@
 {
-  "name": "Salesforce CRM",
+  "default_locale": "en",
   "singleInstall": true
 }
