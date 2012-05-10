@@ -16,37 +16,6 @@
       requesterID:  'workspace.ticket.requester.id'
     },
 
-    templates: {
-      main: '<div class="crm_integration_app">' +
-            '  <div>' +
-            '    <h3>{{I18n.app.name}} <span class="loader" style="display: none;"></span></h3>' +
-            '  </div><hr/>' +
-            '  <section data-sheet-name="records" class="records"></section>' +
-            '  <section data-sheet-name="loading" class="loading"></section>' +
-            '  <section data-sheet-name="message" class="message"></section>' +
-            '  <section class="append_error"></section>' +
-            '</div>',
-      recordsData:  '{{#mainRecord}}' +
-                    '  <p class="type"><a href="{{url}}" target="_blank">{{label}}{{#if record_type}} ({{record_type}}) {{/if}}</a></p>' +
-                    '  <ul>{{#fields}}<li class="field"><p><span class="field_label">{{label}} </span></p><p>{{value}}</p></li>{{/fields}}</ul>' +
-                    '{{/mainRecord}}' +
-                    '{{^mainRecord}}<p>{{I18n.records.no_data}}.</p>{{/mainRecord}}' +
-                    '<div class="sub_records" style="display:none;">' +
-                    '  {{#subRecords}}' +
-                    '    <p class="type"><a href="{{url}}" target="_blank">{{label}}{{#if record_type}} ({{record_type}}) {{/if}}</a></p>' +
-                    '    <ul>{{#fields}}<li class="field"><p><span class="field_label">{{label}} </span></p><p>{{value}}</p></li>{{/fields}}</ul>' +
-                    '  {{/subRecords}}' +
-                    '</div>' +
-                    '{{#if showMore}}' +
-                    '  <p class="show_more">' +
-                    '    <a href="#" class="records_toggle" onclick="return false;">{{I18n.records.show_all}} ({{showMore}})</a>' +
-                    '    <a href="#" class="records_toggle" onclick="return false;" style="display: none;">{{I18n.records.minimize}}</a>' +
-                    '  </p>' +
-                    '{{/if}}',
-      error:  '<div class="error">{{message}}</div>',
-      info:  '<div class="info">{{message}}</div>'
-    },
-
     requests: {
       lookupByID:   function(userID) { return { url: encodeURI("/api/v2beta/crm/%@.json".fmt(userID)) }; },
       syncUserInfo: function(userID) { return { url: encodeURI("/api/v2beta/crm/%@/sync_user_info.json".fmt(userID)) }; }

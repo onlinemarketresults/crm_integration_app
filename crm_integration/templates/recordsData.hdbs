@@ -1,0 +1,17 @@
+{{#mainRecord}}
+  <p class="type"><a href="{{url}}" target="_blank">{{label}}{{#if record_type}} ({{record_type}}) {{/if}}</a></p>
+  <ul>{{#fields}}<li class="field"><p><span class="field_label">{{label}} </span></p><p>{{value}}</p></li>{{/fields}}</ul>
+{{/mainRecord}}
+{{^mainRecord}}<p>{{I18n.records.no_data}}.</p>{{/mainRecord}}
+<div class="sub_records" style="display:none;">
+  {{#subRecords}}
+    <p class="type"><a href="{{url}}" target="_blank">{{label}}{{#if record_type}} ({{record_type}}) {{/if}}</a></p>
+    <ul>{{#fields}}<li class="field"><p><span class="field_label">{{label}} </span></p><p>{{value}}</p></li>{{/fields}}</ul>
+  {{/subRecords}}
+</div>
+{{#if showMore}}
+  <p class="show_more">
+    <a href="#" class="records_toggle" onclick="return false;">{{I18n.records.show_all}} ({{showMore}})</a>
+    <a href="#" class="records_toggle" onclick="return false;" style="display: none;">{{I18n.records.minimize}}</a>
+  </p>
+{{/if}}
