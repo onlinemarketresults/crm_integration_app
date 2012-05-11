@@ -28,8 +28,8 @@
       'requesterID.changed': 'firstLookup',
 
       /** Ajax callbacks **/
-      'lookupByID.success':   'handleLookupResult',
-      'syncUserInfo.success': 'handleSyncUserInfoResult',
+      'lookupByID.done':   'handleLookupResult',
+      'syncUserInfo.done': 'handleSyncUserInfoResult',
 
       'lookupByID.fail':                'handleFailedRequest',
       'handleSyncUserInfoResult.fail':  'handleFailedRequest'
