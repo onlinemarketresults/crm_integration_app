@@ -13,7 +13,7 @@
     defaultState: 'loading',
 
     dependencies: {
-      requesterID:  'workspace.ticket.requester.id'
+      requesterID:  'requester.id'
     },
 
     requests: {
