@@ -1,1 +1,1 @@
-<div class="error">{{message}}</div>
+<div class="message"><div class="error">{{message}}</div></div>

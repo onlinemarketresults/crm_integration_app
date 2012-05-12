@@ -1,9 +1,0 @@
-<div class="crm_integration_app">
-  <div>
-    <h3>{{I18n.app.name}} <span class="loader" style="display: none;"></span></h3>
-  </div><hr/>
-  <section data-sheet-name="records" class="records"></section>
-  <section data-sheet-name="loading" class="loading"></section>
-  <section data-sheet-name="message" class="message"></section>
-  <section class="append_error"></section>
-</div>

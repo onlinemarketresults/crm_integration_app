@@ -17,8 +17,8 @@
     },
 
     requests: {
-      lookupByID:   function(userID) { return { url: encodeURI("/api/v2beta/crm/%@.json".fmt(userID)) }; },
-      syncUserInfo: function(userID) { return { url: encodeURI("/api/v2beta/crm/%@/sync_user_info.json".fmt(userID)) }; }
+      lookupByID:   function(userID) { return { url: encodeURI(helpers.fmt("/api/v2beta/crm/%@.json", userID)) }; },
+      syncUserInfo: function(userID) { return { url: encodeURI(helpers.fmt("/api/v2beta/crm/%@/sync_user_info.json", userID)) }; }
     },
 
     events: {
@@ -38,8 +38,8 @@
     firstLookup: function() {
       this._resetAppState();
 
-      if (this.deps.requesterID)
-        this.request('lookupByID').perform(this.deps.requesterID);
+      if (this.dependency('requesterID'))
+        this.ajax('lookupByID', this.dependency('requesterID'));
     },
 
     handleLookupResult: function(e, data, textStatus, response) {
@@ -86,13 +86,11 @@
     },
 
     _renderRecords: function(records) {
-      this.sheet('records')
-        .render('recordsData', { mainRecord: records[0], showMore: records.slice(1).length, subRecords: records.slice(1) })
-        .show();
+      this.switchTo('records', { mainRecord: records[0], showMore: records.slice(1).length, subRecords: records.slice(1) });
     },
 
     _resetAppState: function() {
-      this.sheet('loading').show();
+      this.switchTo('loading');
       this.currentDelay = this.INITIAL_DELAY;
       this.timesRequested = 0;
       this.$('.loader').hide();
@@ -113,7 +111,7 @@
       this.$('.loader').show();
 
       this.currentTimeoutID = setTimeout(function() {
-        self.request('syncUserInfo').perform(self.deps.requesterID);
+        self.ajax('syncUserInfo', self.dependency('requesterID'));
       }, this.currentDelay);
 
       this.currentDelay *= 2;
@@ -135,15 +133,11 @@
     handleFailedRequest: function(event, jqXHR, textStatus, errorThrown) { this.showError( this.I18n.t('problem', { error: errorThrown.toString() }) ); },
 
     showError: function(msg) {
-      this.sheet('message')
-        .render('error', { message: msg })
-        .show();
+      this.switchTo('error', { message: msg });
     },
 
     showMessage: function(msg) {
-      this.sheet('message')
-        .render('info', { message: msg })
-        .show();
+      this.switchTo('info', { message: msg });
     }
   });
 
