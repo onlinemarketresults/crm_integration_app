@@ -10,7 +10,7 @@
     INITIAL_DELAY: 5000,
     MAX_SYNC_RETRIES: 5,
 
-    defaultSheet: 'loading',
+    defaultState: 'loading',
 
     dependencies: {
       requesterID:  'workspace.ticket.requester.id'
