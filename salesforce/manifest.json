@@ -4,5 +4,6 @@
     "email": "support@zendesk.com"
   },
   "default_locale": "en",
+  "private": false,
   "singleInstall": true
 }
