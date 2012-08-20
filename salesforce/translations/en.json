@@ -1,7 +1,6 @@
 {
   "app": {
-   "description": "Show custom Salesforce data about the ticket requester",
-   "name":        "Salesforce"
+   "description": "Show custom Salesforce data about the ticket requester"
   },
 
   "problem": "There's been a problem: {{error}}",

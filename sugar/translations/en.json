@@ -1,7 +1,6 @@
 {
   "app": {
-   "description": "Show custom SugarCRM data about the ticket requester",
-   "name":        "SugarCRM"
+   "description": "Show custom SugarCRM data about the ticket requester"
   },
 
   "problem": "There's been a problem: {{error}}",
