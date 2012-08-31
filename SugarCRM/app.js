@@ -31,6 +31,7 @@
     },
 
     firstLookup: function() {
+      if ( !this.ticket().requester() ) { return; }
       this._resetAppState();
 
       if (this.ticket().requester().id())
