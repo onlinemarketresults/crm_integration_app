@@ -1,7 +1,7 @@
-<div class="sugar_app crm_integration_app">
-  <div>
-    <h3>{{setting "name"}} <span class="loader" style="display: none;"></span> <span class="logo"></span></h3>
-  </div><hr/>
-  <div data-main></div>
-  <section class="append_error"></section>
-</div>
+<header>
+  <span class="logo"/>
+  <span class="loader app_loader" style="display: none;"/>
+  <h3>{{setting "name"}}</h3>
+</header>
+<section data-main />
+<section class="append_error"></section>
