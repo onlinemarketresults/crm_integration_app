@@ -1,6 +1,6 @@
 <header>
   <span class="logo"/>
-  <span class="loader app_loader" style="display: none;"/>
+  <span class="loader app_loader"/>
   <h3>{{setting "name"}}</h3>
 </header>
 <section data-main />
