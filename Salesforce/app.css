@@ -1,0 +1,48 @@
+.append_error {
+  padding-left: 0px;
+}
+
+.loader img {
+  height: 18px;
+  width: 18px;
+}
+
+.message .error, .append_error {
+  color: red;
+  font-weight: bold;
+}
+
+.message {
+  .error {
+    color: red;
+    padding: 10px;
+  }
+
+  .info {
+    color: #808080;
+    font-weight: bold;
+  }
+}
+
+.records {
+  .field_label, .type {
+    font-weight: bold;
+  }
+
+  .field {
+    margin-bottom: 5px;
+  }
+
+  .show_more {
+    margin-top: 5px;
+    text-align: right;
+  }
+
+  .sub_records {
+    margin-top: 10px;
+  }
+
+  .type {
+    margin-bottom: 10px;
+  }
+}
