@@ -1,12 +1,13 @@
 (function() {
 
+  var INITIAL_DELAY     = 5000,
+      MAX_SYNC_RETRIES  = 5;
+
   return {
     // Local vars
     currentDelay: 5000,
     currentTimeoutID: undefined,
     timesRequested: 0,
-    INITIAL_DELAY: 5000,
-    MAX_SYNC_RETRIES: 5,
 
     defaultState: 'loading',
 
@@ -87,7 +88,7 @@
 
     _resetAppState: function() {
       this.switchTo('loading');
-      this.currentDelay = this.INITIAL_DELAY;
+      this.currentDelay = INITIAL_DELAY;
       this.timesRequested = 0;
       this.hideLoader();
       this.$('.append_error').html('');
@@ -98,7 +99,7 @@
       var self = this;
       this.timesRequested++;
 
-      if (this.timesRequested > this.MAX_SYNC_RETRIES) {
+      if (this.timesRequested > MAX_SYNC_RETRIES) {
         this.appendError(this.I18n.t('sync.error'));
         return;
       }
