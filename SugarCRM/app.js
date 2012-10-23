@@ -75,8 +75,6 @@
           this._renderRecords(records);
           break;
         case "failed":
-          this.appendError(this.I18n.t('sync.error'));
-          break;
         default:
           this.appendError(this.I18n.t('sync.error'));
       }
